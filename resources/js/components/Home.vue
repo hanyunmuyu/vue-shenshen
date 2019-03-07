@@ -24,7 +24,7 @@
 
     .footer {
         bottom: 0px;
-        position: absolute;
+        position: fixed;
         width: 100%;
     }
 </style>

@@ -23,10 +23,23 @@
             <p>“白痴，你也哭了？因为那些软弱拖累你的脚步？”</p>
         </div>
         <div class="demo-text" v-if="active === 2">
-            <p>“不，这泪水……是因为勇气，因为力量，因为信任，……你不会懂的！”</p>
-            <p>“我不会帮你，想要什么样的未来……自己去追寻吧！”</p>
-            <p>“我不需要你的帮忙！未来我会一手开启，什么样的敌人我也不会惧怕……还有，其实我们可以成为朋友的……”</p>
-            <p>“也许吧，未来……给你了。”</p>
+            <mu-list>
+                <mu-sub-header>Today</mu-sub-header>
+                <mu-list-item v-for="index in 100" :key="index" avatar>
+                    <mu-list-item-action>
+                        <mu-avatar>
+                            <img src="../../assets/images/kkx.jpg">
+                        </mu-avatar>
+                    </mu-list-item-action>
+                    <mu-list-item-content>
+                        <mu-list-item-title>寒云{{index}}</mu-list-item-title>
+                        <mu-list-item-sub-title>河南工业大学</mu-list-item-sub-title>
+                    </mu-list-item-content>
+                    <mu-list-item-action>
+                        <mu-icon value="star_border"></mu-icon>
+                    </mu-list-item-action>
+                </mu-list-item>
+            </mu-list>
         </div>
     </mu-container>
 </template>
@@ -36,7 +49,7 @@
         name: "SchoolIndex",
         data() {
             return {
-                active: 0
+                active: 2
             };
         },
         methods: {
@@ -56,5 +69,10 @@
             margin: 8px 0;
 
         }
+    }
+
+    .demo-list-wrap {
+        width: 100%;
+        max-width: 360px;
     }
 </style>

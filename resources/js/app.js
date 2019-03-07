@@ -3,9 +3,6 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
-require('./bootstrap');
-
 import router from './router'
 import MuseUI from 'muse-ui';
 import 'muse-ui/dist/muse-ui.css';
