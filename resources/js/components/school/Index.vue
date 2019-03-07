@@ -24,8 +24,7 @@
         </div>
         <div class="demo-text" v-if="active === 2">
             <mu-list>
-                <mu-sub-header>Today</mu-sub-header>
-                <mu-list-item v-for="index in 100" :key="index" avatar>
+                <mu-list-item v-for="index in 20" :key="index" avatar>
                     <mu-list-item-action>
                         <mu-avatar>
                             <img src="../../assets/images/kkx.jpg">

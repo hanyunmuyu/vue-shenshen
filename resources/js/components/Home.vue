@@ -1,6 +1,9 @@
 <template>
     <div>
-        <router-view></router-view>
+        <div style="margin-bottom: 30px">
+            <router-view></router-view>
+
+        </div>
         <div class="footer">
             <app-footer></app-footer>
         </div>
