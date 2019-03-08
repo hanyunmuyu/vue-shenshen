@@ -4,8 +4,13 @@
 </template>
 
 <script>
+    import api from '../../api';
+
     export default {
-        name: "Index"
+        name: "Index",
+        mounted() {
+            api.getNewsRecommend({a: 1})
+        }
     }
 </script>
 

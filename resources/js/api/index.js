@@ -1,8 +1,9 @@
 import axios from 'axios'
+
 export default {
     // 首页推荐接口
     getNewsRecommend: function (params) {
-        return axios.get('api/news/recommend', {
+        return axios.get('api/v1/index', {
             params: params
         })
     },
