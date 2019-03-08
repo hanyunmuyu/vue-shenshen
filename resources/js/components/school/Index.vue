@@ -1,6 +1,6 @@
 <template>
     <div>
-        <mu-appbar style="width: 100%;" color="blue" center>
+        <mu-appbar :class="{fixed:scrollTop>100}" color="blue" center v-scroll.sync="scroll">
             <mu-tabs :value.sync="active" center>
                 <mu-tab>动态</mu-tab>
                 <mu-tab>校园</mu-tab>
@@ -12,9 +12,7 @@
         </mu-appbar>
 
         <div class="demo-text" v-if="active === 0">
-            <p>
-                “……是的，我承认从很早以前我都害怕死亡，在医院里被人研究的时候，以前做出布局的时候，其实我很怕死的，因为除了死以外，我没有值得珍惜的东西，很奇怪是吧？恰好是这样我真的很怕死，因为我想要有值得珍惜的东西之后，死亡之后才会不寂寞，我才能够安然的面对死亡……”
-            </p>
+
         </div>
         <div class="demo-text" v-if="active === 1">
             <p>“我的心从来没有这么坚定过，所以我会为了补偿而死，也可以为了补偿而死……一辈子，急辈子都无所谓，我绝不后退！”</p>
@@ -55,13 +53,20 @@
         name: "SchoolIndex",
         data() {
             return {
-                active: 2
+                active: 2,
+                scrollTop: 0
             };
         },
         methods: {
             search() {
                 this.$router.push('/search')
+            },
+            scroll() {
+                this.scrollTop = window.scrollY;
             }
+        },
+        mounted() {
+            this.scrollTop = window.scrollY;
         }
     }
 </script>
@@ -80,5 +85,12 @@
     .demo-list-wrap {
         width: 100%;
         max-width: 360px;
+    }
+
+    .fixed {
+        position: fixed;
+        top: 0;
+        margin: 0 auto;
+        width: 100%;
     }
 </style>

@@ -7,8 +7,10 @@ import router from './router'
 import MuseUI from 'muse-ui';
 import 'muse-ui/dist/muse-ui.css';
 import 'material-icons/iconfont/material-icons.css'
+import Helpers from 'muse-ui/lib/Helpers';
 
 window.Vue = require('vue');
+Vue.use(Helpers);
 Vue.use(MuseUI);
 
 /**
