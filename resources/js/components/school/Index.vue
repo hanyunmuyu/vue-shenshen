@@ -2,8 +2,8 @@
     <div>
         <mu-appbar :class="{fixed:scrollTop>100}" color="blue" center v-scroll.sync="scroll">
             <mu-tabs :value.sync="active" center>
-                <mu-tab>广场</mu-tab>
                 <mu-tab>校园</mu-tab>
+                <mu-tab>广场</mu-tab>
                 <mu-tab>校友</mu-tab>
             </mu-tabs>
             <mu-button icon slot="right" @click="search">
@@ -12,6 +12,19 @@
         </mu-appbar>
 
         <div class="demo-text" v-if="active === 0">
+            <mu-grid-list class="grid-list-inline" :cols="3">
+                <mu-grid-tile v-for="(tile, index) in list" :key="index">
+                    <img :src="tile.image">
+                    <span slot="title">
+                        {{tile.title}}
+                    </span>
+                    <span slot="subTitle">
+                        {{tile.description}}
+                    </span>
+                </mu-grid-tile>
+            </mu-grid-list>
+        </div>
+        <div class="demo-text" v-if="active === 1">
             <mu-list>
                 <div v-for="index in 20" :key="index" style="padding-bottom: 8px">
                     <mu-list-item avatar>
@@ -52,40 +65,6 @@
                     <mu-divider inset></mu-divider>
                 </div>
             </mu-list>
-
-
-            <mu-flex class="flex-wrapper" align-items="center">
-                <mu-flex class="flex-demo">
-                    <mu-avatar size="32">
-                        <img src="../../assets/images/kkx.jpg">
-                    </mu-avatar>
-                </mu-flex>
-                <mu-flex class="flex-demo">
-                    寒云
-                </mu-flex>
-                <mu-flex class="flex-demo" justify-content="end" fill>
-                    <mu-flex>
-                        个人主页
-                        <mu-icon value="keyboard_arrow_right"></mu-icon>
-                    </mu-flex>
-                </mu-flex>
-            </mu-flex>
-        </div>
-        <div class="demo-text" v-if="active === 1">
-
-            <mu-grid-list class="grid-list-inline" :cols="3">
-                <mu-grid-tile v-for="(tile, index) in list" :key="index">
-                    <img :src="tile.image">
-                    <span slot="title">
-                        {{tile.title}}
-                    </span>
-                    <span slot="subTitle">
-                        {{tile.description}}
-                    </span>
-                </mu-grid-tile>
-            </mu-grid-list>
-
-
         </div>
         <div class="demo-text" v-if="active === 2">
             <mu-list>
@@ -122,7 +101,7 @@
         name: "SchoolIndex",
         data() {
             return {
-                active: 0,
+                active: 1,
                 scrollTop: 0,
                 list: [
                     {
