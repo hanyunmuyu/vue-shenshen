@@ -2,7 +2,7 @@
     <div>
         <mu-appbar :class="{fixed:scrollTop>100}" color="blue" center v-scroll.sync="scroll">
             <mu-tabs :value.sync="active" center>
-                <mu-tab>动态</mu-tab>
+                <mu-tab>广场</mu-tab>
                 <mu-tab>校园</mu-tab>
                 <mu-tab>校友</mu-tab>
             </mu-tabs>
@@ -12,13 +12,80 @@
         </mu-appbar>
 
         <div class="demo-text" v-if="active === 0">
+            <mu-list>
+                <div v-for="index in 20" :key="index" style="padding-bottom: 8px">
+                    <mu-list-item avatar>
+                        <mu-list-item-action>
+                            <mu-avatar size="26">
+                                <img src="../../assets/images/kkx.jpg">
+                            </mu-avatar>
+                        </mu-list-item-action>
+                        <mu-list-item-content>
+                            <mu-list-item-title>寒云{{index}}</mu-list-item-title>
+                            <mu-list-item-sub-title>53分钟以前</mu-list-item-sub-title>
+                        </mu-list-item-content>
+                        <mu-list-item-action>
+                            <mu-flex align-items="center" justify-content="end" fill>
+                                <mu-flex>
+                                    <mu-icon value="more_vert" right></mu-icon>
+                                </mu-flex>
+                            </mu-flex>
+                        </mu-list-item-action>
+                    </mu-list-item>
+                    <mu-sub-header>
+                        我得意的笑我得意的笑我得意的笑
+                    </mu-sub-header>
+                    <div style="text-align: center">
+                        <img v-for="i in 6" style="width: 33.3333%;padding: 2px" src="../../assets/images/kkx.jpg"
+                             :key="i">
+                    </div>
+                    <mu-flex align-items="center" justify-content="center">
+                        <mu-flex justify-content="center" fill>
+                            <mu-icon value="thumb_up" size="18"></mu-icon>
+                            111
+                        </mu-flex>
+                        <mu-flex justify-content="center" fill>
+                            <mu-icon value="chat_bubble_outline" size="18"></mu-icon>
+                            11
+                        </mu-flex>
+                    </mu-flex>
+                    <mu-divider inset></mu-divider>
+                </div>
+            </mu-list>
 
+
+            <mu-flex class="flex-wrapper" align-items="center">
+                <mu-flex class="flex-demo">
+                    <mu-avatar size="32">
+                        <img src="../../assets/images/kkx.jpg">
+                    </mu-avatar>
+                </mu-flex>
+                <mu-flex class="flex-demo">
+                    寒云
+                </mu-flex>
+                <mu-flex class="flex-demo" justify-content="end" fill>
+                    <mu-flex>
+                        个人主页
+                        <mu-icon value="keyboard_arrow_right"></mu-icon>
+                    </mu-flex>
+                </mu-flex>
+            </mu-flex>
         </div>
         <div class="demo-text" v-if="active === 1">
-            <p>“我的心从来没有这么坚定过，所以我会为了补偿而死，也可以为了补偿而死……一辈子，急辈子都无所谓，我绝不后退！”</p>
-            <p>“如果我后退呢？如果我想要死呢？我不想你再次背对着我逃跑了……”</p>
-            <p>“那么就去地狱找到你，我绝对不逃！”</p>
-            <p>“白痴，你也哭了？因为那些软弱拖累你的脚步？”</p>
+
+            <mu-grid-list class="grid-list-inline" :cols="3">
+                <mu-grid-tile v-for="(tile, index) in list" :key="index">
+                    <img :src="tile.image">
+                    <span slot="title">
+                        {{tile.title}}
+                    </span>
+                    <span slot="subTitle">
+                        {{tile.description}}
+                    </span>
+                </mu-grid-tile>
+            </mu-grid-list>
+
+
         </div>
         <div class="demo-text" v-if="active === 2">
             <mu-list>
@@ -49,12 +116,51 @@
 </template>
 
 <script>
+    import breakfast from '../../assets/images/kkx.jpg';
+
     export default {
         name: "SchoolIndex",
         data() {
             return {
-                active: 2,
-                scrollTop: 0
+                active: 0,
+                scrollTop: 0,
+                list: [
+                    {
+                        image: breakfast,
+                        title: '河南工业大学',
+                        description: '河南工业大学'
+                    },
+                    {
+                        image: breakfast,
+                        title: '河南工业大学',
+                        description: '河南工业大学'
+                    },
+                    {
+                        image: breakfast,
+                        title: '河南工业大学',
+                        description: '河南工业大学'
+                    },
+                    {
+                        image: breakfast,
+                        title: '河南工业大学',
+                        description: '河南工业大学'
+                    },
+                    {
+                        image: breakfast,
+                        title: '河南工业大学',
+                        description: '河南工业大学'
+                    },
+                    {
+                        image: breakfast,
+                        title: '河南工业大学',
+                        description: '河南工业大学'
+                    },
+                    {
+                        image: breakfast,
+                        title: '河南工业大学',
+                        description: '河南工业大学'
+                    }
+                ]
             };
         },
         methods: {
