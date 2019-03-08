@@ -14,7 +14,7 @@
                     </mu-avatar>
                 </mu-flex>
                 <mu-flex class="flex-demo">
-                    寒云
+                    {{user.name}}
                 </mu-flex>
                 <mu-flex @click="userCenter" class="flex-demo" justify-content="end" fill>
                     <mu-flex>
@@ -45,8 +45,6 @@
 </template>
 
 <script>
-    import api from '../../api'
-
     export default {
         name: "Index",
         data() {
@@ -59,13 +57,15 @@
         },
         methods: {
             userCenter() {
-                console.log('userCenter')
             }
         },
         mounted() {
-            api.login({name: 'hanyun--0'}).then((d) => {
-                this.$data.user = d.data;
-            })
+            let user = this.$store.state.user;
+            if (user === null) {
+                this.$router.push('/login');
+            } else {
+                this.$data.user = user;
+            }
         }
     }
 </script>

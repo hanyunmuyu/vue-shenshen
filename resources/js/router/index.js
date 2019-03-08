@@ -6,6 +6,7 @@ import HomeIndex from '../components/home/Index'
 import GroupIndex from '../components/group/Index'
 import UserIndex from '../components/user/Index'
 import SearchIndex from '../components/search/Index'
+import LoginIndex from '../components/login/Index'
 
 Vue.use(Router)
 export default new Router({
@@ -41,6 +42,11 @@ export default new Router({
             path: '/search',
             name: 'SearchIndex',
             component: SearchIndex,
+        },
+        {
+            path: '/login',
+            name: 'LoginIndex',
+            component: LoginIndex
         }
     ]
 })
