@@ -35,7 +35,14 @@
                         <mu-list-item-sub-title>河南工业大学</mu-list-item-sub-title>
                     </mu-list-item-content>
                     <mu-list-item-action>
-                        <mu-icon value="star_border"></mu-icon>
+                        <mu-flex align-items="center" justify-content="end" fill>
+                            <mu-flex>
+                                围观
+                            </mu-flex>
+                            <mu-flex>
+                                <mu-icon value="keyboard_arrow_right" right></mu-icon>
+                            </mu-flex>
+                        </mu-flex>
                     </mu-list-item-action>
                 </mu-list-item>
             </mu-list>
