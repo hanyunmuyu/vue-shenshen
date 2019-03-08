@@ -25,12 +25,10 @@
         watch: {
             $route(to, from) {
                 this.$data.home = this.$route.path;
-                console.log(this.$data.home);
             }
         },
         mounted() {
             this.$data.home = this.$route.path;
-            console.log(this.$route.path);
         }
     }
 </script>

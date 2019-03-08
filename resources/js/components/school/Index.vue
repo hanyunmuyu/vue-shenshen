@@ -1,6 +1,6 @@
 <template>
-    <mu-container>
-        <mu-appbar color="blue" center>
+    <div>
+        <mu-appbar style="width: 100%;" color="blue" center>
             <mu-tabs :value.sync="active" center>
                 <mu-tab>动态</mu-tab>
                 <mu-tab>校园</mu-tab>
@@ -40,7 +40,7 @@
                 </mu-list-item>
             </mu-list>
         </div>
-    </mu-container>
+    </div>
 </template>
 
 <script>

@@ -18,7 +18,7 @@
                 <mu-flex @click="userCenter" class="flex-demo" justify-content="end" fill>
                     <mu-flex>
                         个人主页
-                        <mu-icon value="arrow_forward"></mu-icon>
+                        <mu-icon value="keyboard_arrow_right"></mu-icon>
                     </mu-flex>
                 </mu-flex>
             </mu-flex>
