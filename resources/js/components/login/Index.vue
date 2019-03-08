@@ -16,7 +16,7 @@
                     <mu-checkbox label="同意用户协议" v-model="validateForm.isAgree"></mu-checkbox>
                 </mu-form-item>
                 <mu-form-item>
-                    <mu-button color="primary" @click="submit">提交</mu-button>
+                    <mu-button color="primary" @click="submit">登录</mu-button>
                     <mu-button @click="clear">重置</mu-button>
                 </mu-form-item>
                 <mu-flex justify-content="center" align-items="center">

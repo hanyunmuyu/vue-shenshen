@@ -18,7 +18,7 @@ axios.interceptors.response.use(
 );
 
 function get(url, params) {
-    return axios.get('api/v1/index', params).then((d) => {
+    return axios.get(url, params).then((d) => {
         return d.data;
     }).then((v) => {
         return v;
