@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => 'v1', 'namespace' => 'v1'], function () {
     Route::get('/index', 'IndexController@index');
+    Route::post('/login', 'LoginController@index');
     Route::group(['middleware' => ['apiMiddleware']], function () {
         Route::get('/user', 'UserController@index');
 

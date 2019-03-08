@@ -1,6 +1,7 @@
 <template>
     <div>
-        <mu-appbar style="width: 100%;" color="primary">
+        <mu-appbar color="primary">
+            <p slot="default" style="text-align: center">我</p>
             <mu-button icon slot="right">
                 <mu-icon value="settings"></mu-icon>
             </mu-button>
@@ -9,7 +10,7 @@
             <mu-flex class="flex-wrapper" align-items="center">
                 <mu-flex class="flex-demo">
                     <mu-avatar :size="size">
-                        <img src="../../assets/images/kkx.jpg">
+                        <img :src="user.avatar">
                     </mu-avatar>
                 </mu-flex>
                 <mu-flex class="flex-demo">
@@ -44,17 +45,27 @@
 </template>
 
 <script>
+    import api from '../../api'
+
     export default {
         name: "Index",
         data() {
             return {
-                size: 48
+                size: 48,
+                user: {
+                    avatar: ''
+                }
             }
         },
         methods: {
             userCenter() {
                 console.log('userCenter')
             }
+        },
+        mounted() {
+            api.login({name: 'hanyun--0'}).then((d) => {
+                this.$data.user = d.data;
+            })
         }
     }
 </script>
