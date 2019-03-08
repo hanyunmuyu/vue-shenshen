@@ -25,13 +25,19 @@
         </mu-container>
         <mu-flex style="margin-top: 6px" align-items="center">
             <mu-flex class="flex-demo" justify-content="center" fill>
-                粉丝.100
+                100
+                <br/>
+                粉丝
             </mu-flex>
             <mu-flex class="flex-demo" justify-content="center" fill>
-                好友.100
+                100
+                <br/>
+                好友
             </mu-flex>
             <mu-flex class="flex-demo" justify-content="center" fill>
-                社团.100
+                100
+                <br/>
+                社团
             </mu-flex>
         </mu-flex>
     </div>
