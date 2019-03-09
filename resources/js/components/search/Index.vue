@@ -4,9 +4,12 @@
             <mu-button icon slot="left" @click="goBack">
                 <mu-icon value="keyboard_arrow_left"></mu-icon>
             </mu-button>
-            <mu-text-field placeholder="输入内容搜索" solo full-width>
-
-            </mu-text-field>
+            <mu-flex justify-content="center">
+                <mu-flex justify-content="center">
+                    <mu-text-field full-width placeholder="输入内容搜索" solo>
+                    </mu-text-field>
+                </mu-flex>
+            </mu-flex>
         </mu-appbar>
     </div>
 </template>

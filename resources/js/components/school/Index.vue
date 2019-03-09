@@ -26,7 +26,8 @@
         </div>
         <div class="demo-text" v-if="active === 1">
             <mu-list>
-                <div v-for="index in 20" :key="index" style="padding-bottom: 8px">
+
+                <div @click="detail(index)" v-for="index in 20" :key="index" style="padding-bottom: 8px">
                     <mu-list-item avatar>
                         <mu-list-item-action>
                             <mu-avatar size="26">
@@ -34,7 +35,7 @@
                             </mu-avatar>
                         </mu-list-item-action>
                         <mu-list-item-content>
-                            <mu-list-item-title>寒云{{index}}</mu-list-item-title>
+                            <mu-list-item-title>寒云--{{index}}</mu-list-item-title>
                             <mu-list-item-sub-title>53分钟以前</mu-list-item-sub-title>
                         </mu-list-item-content>
                         <mu-list-item-action>
@@ -45,9 +46,9 @@
                             </mu-flex>
                         </mu-list-item-action>
                     </mu-list-item>
-                    <mu-sub-header>
+                    <mu-flex>
                         我得意的笑我得意的笑我得意的笑
-                    </mu-sub-header>
+                    </mu-flex>
                     <div style="text-align: center">
                         <img v-for="i in 6" style="width: 33.3333%;padding: 2px" src="../../assets/images/kkx.jpg"
                              :key="i">
@@ -64,6 +65,7 @@
                     </mu-flex>
                     <mu-divider inset></mu-divider>
                 </div>
+
             </mu-list>
         </div>
         <div class="demo-text" v-if="active === 2">
@@ -148,6 +150,9 @@
             },
             scroll() {
                 this.scrollTop = window.scrollY;
+            },
+            detail(id) {
+                this.$router.push({path: '/', query: {id: id}})
             }
         },
         mounted() {
@@ -158,13 +163,8 @@
 
 <style scoped lang="scss">
     .demo-text {
-        padding: 16px;
+        padding: 0 16px;
         background: #fff;
-
-        p {
-            margin: 8px 0;
-
-        }
     }
 
     .demo-list-wrap {

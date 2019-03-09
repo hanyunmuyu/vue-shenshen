@@ -12,11 +12,17 @@ const mutations = {
     login(state, user) {
         state.user = user;
         storage.setItem('user', JSON.stringify(user));
+    },
+    logout() {
+        storage.clear();
     }
 };
 const actions = {
     login({commit}, user) {
         commit('login', user);
+    },
+    logout({commit}) {
+        commit('logout');
     }
 };
 export default new Vuex.Store({

@@ -2,7 +2,7 @@
     <div>
         <mu-appbar color="primary">
             <p slot="default" style="text-align: center">我</p>
-            <mu-button icon slot="right">
+            <mu-button icon slot="right" to="/setting">
                 <mu-icon value="settings"></mu-icon>
             </mu-button>
         </mu-appbar>

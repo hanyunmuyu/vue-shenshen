@@ -7,6 +7,8 @@ import GroupIndex from '../components/group/Index'
 import UserIndex from '../components/user/Index'
 import SearchIndex from '../components/search/Index'
 import LoginIndex from '../components/login/Index'
+import Logout from '../components/login/Logout'
+import Setting from '../components/setting';
 
 Vue.use(Router)
 export default new Router({
@@ -47,6 +49,16 @@ export default new Router({
             path: '/login',
             name: 'LoginIndex',
             component: LoginIndex
+        },
+        {
+            path: '/logout',
+            name: 'Logout',
+            component: Logout
+        },
+        {
+            path: '/setting',
+            name: 'Setting',
+            component: Setting
         }
     ]
 })
