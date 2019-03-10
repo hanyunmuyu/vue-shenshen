@@ -81,12 +81,11 @@
                         <mu-list-item-sub-title>河南工业大学</mu-list-item-sub-title>
                     </mu-list-item-content>
                     <mu-list-item-action>
-                        <mu-flex align-items="center" justify-content="end" fill>
+                        <mu-flex align-items="center" justify-content="end">
                             <mu-flex>
-                                围观
-                            </mu-flex>
-                            <mu-flex>
-                                <mu-icon value="keyboard_arrow_right" right></mu-icon>
+                                <mu-button small round color="blue">
+                                    关注
+                                </mu-button>
                             </mu-flex>
                         </mu-flex>
                     </mu-list-item-action>
@@ -152,7 +151,7 @@
                 this.scrollTop = window.scrollY;
             },
             detail(id) {
-                this.$router.push({path: '/', query: {id: id}})
+                this.$router.push({path: '/square/detail', query: {id: id}})
             }
         },
         mounted() {

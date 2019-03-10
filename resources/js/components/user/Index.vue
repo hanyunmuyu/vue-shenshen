@@ -50,9 +50,7 @@
         data() {
             return {
                 size: 48,
-                user: {
-                    avatar: ''
-                }
+                user: {}
             }
         },
         methods: {

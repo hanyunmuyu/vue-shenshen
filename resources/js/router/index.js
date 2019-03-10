@@ -9,6 +9,7 @@ import SearchIndex from '../components/search/Index'
 import LoginIndex from '../components/login/Index'
 import Logout from '../components/login/Logout'
 import Setting from '../components/setting';
+import SquareDetail from '../components/school/square/Detail';
 
 Vue.use(Router)
 export default new Router({
@@ -59,6 +60,11 @@ export default new Router({
             path: '/setting',
             name: 'Setting',
             component: Setting
+        },
+        {
+            path: '/square/detail',
+            name: 'SquareDetail',
+            component: SquareDetail
         }
     ]
 })

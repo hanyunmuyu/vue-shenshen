@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-scroll.sync="scroll">
         <div style="margin-bottom: 30px">
             <router-view></router-view>
         </div>
@@ -14,6 +14,28 @@
 
     export default {
         name: "Home",
+        data() {
+            return {
+                scrollTop: 0,
+                startY: 0,
+                timer: null
+            }
+        },
+        methods: {
+            scroll() {
+                this.scrollTop = window.scrollY;
+                if (this.timer === null) {
+                    this.timer = setTimeout(() => {
+                        clearTimeout(this.timer);
+                        this.timer = null;
+                    }, 2000);
+                }
+            }
+
+        },
+        mounted() {
+            this.scrollTop = window.scrollY;
+        },
         components: {AppFooter}
     }
 </script>
