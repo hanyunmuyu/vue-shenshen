@@ -36,7 +36,7 @@
                      :key="i">
             </div>
             <mu-flex align-items="center" justify-content="center">
-                <mu-flex justify-content="left" fill>
+                <mu-flex fill>
                     <mu-icon value="thumb_up" size="18"></mu-icon>
                     111
                 </mu-flex>
