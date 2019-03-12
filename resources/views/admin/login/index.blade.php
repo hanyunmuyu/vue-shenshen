@@ -9,9 +9,9 @@
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="/lte/components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/lte/componentsfont-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lte/components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="/lte/componentsIonicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/lte/components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/lte/css/AdminLTE.min.css">
     <!-- iCheck -->
@@ -43,7 +43,7 @@
                     // $(form).ajaxSubmit();
                     if ($("#login-username").validate()) {
                         $.ajax({
-                            url: '/doLogin',
+                            url: '/admin/doLogin',
                             method: 'post',
                             data: $("form").serialize(),
                             success: function (d) {
