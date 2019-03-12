@@ -102,7 +102,7 @@
         name: "SchoolIndex",
         data() {
             return {
-                active: 1,
+                active: 0,
                 scrollTop: 0,
                 list: [
                     {

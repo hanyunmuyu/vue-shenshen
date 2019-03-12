@@ -34,7 +34,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="active">
-                        <a href="/admin/proposal">
+                        <a href="">
                             <i class="fa fa-circle-o"></i>
                             全部提案
                         </a>

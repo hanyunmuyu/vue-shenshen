@@ -17,5 +17,4 @@ Route::post('/doLogin', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');
 Route::group(['middleware' => ['admin.auth']], function () {
     Route::get('/', 'IndexController@index');
-    Route::get('/proposal', 'ProposalController@index');
 });
