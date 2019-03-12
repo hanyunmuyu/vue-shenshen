@@ -48,7 +48,7 @@
                             data: $("form").serialize(),
                             success: function (d) {
                                 if (d.code == 200) {
-                                    window.location.href = '/'
+                                    window.location.href = '/admin'
                                 } else {
                                     alert(d.msg)
                                 }
@@ -100,7 +100,7 @@
                     <form id="login-username">
                         @csrf
                         <div class="form-group has-feedback">
-                            <input type="text" name="username" class="form-control" placeholder="用户名或者手机号" required>
+                            <input type="text" name="name" class="form-control" placeholder="用户名或者手机号" required>
                             <span class="glyphicon glyphicon-user form-control-feedback"></span>
                         </div>
                         <div class="form-group has-feedback">
